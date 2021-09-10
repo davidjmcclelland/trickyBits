@@ -59,9 +59,7 @@
         var results = document.querySelector("#results");
 
         // STEP 1: Use Array.reduce to produce this array from places
-
-        let states = places.reduce(function(states, place ) {
-
+        var states = places.reduce(function(states, place){
             if (states.indexOf(place.state) === -1) {
                 states.push(place.state);
             }
@@ -71,11 +69,11 @@
 console.log('states', states);
 
         // STEP 2: Create select box options for every one of those states
-        states.map(function(state) {
+        states.map(function(state){
             var option = document.createElement("option");
-                option.setAttribute("value", state);
-                option.append(document.createTextNode(state));
-                selectState.appendChild(option);
+            option.setAttribute("value", state);
+            option.append(document.createTextNode(state));
+            selectState.appendChild(option);
         })
 
         selectState.addEventListener("change", function (evt) {
@@ -92,14 +90,15 @@ console.log('states', states);
             }
 
             // STEP 3: Use filter to get all the towns in the selected state
-            var towns = places.filter(function(place){
+            var towns = places.filter(function(place) {
                 return place.state === state;
             });
             console.log('cities: ' + JSON.stringify(towns));
 
             // STEP 4: Use reduce on towns to get the total population
-            let totalPopulation = towns.reduce(function(totalPopulation, town) {
-                return totalPopulation += town.population
+            //var totalPopulation = 1000;
+            var totalPopulation = towns.reduce(function(totalPopulation, town) {
+                return totalPopulation += town.population;
             }, 0);
 
             // Calculate mean population the easy way

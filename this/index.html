@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>this scopes</title>
+        <!--link href="../../styles.build.css" type="text/css" rel="stylesheet"-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" tyle="text/css"
+        rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+        <script src="start.js"></script>
+    </head>
+    <body class="main-body ">
+        <div class="main-container">
+
+            <div class="main-content">
+                <h1 class="main-head">Making Copies</h1>
+
+                <p class="text-left">
+                    The problem with copying objects: they are references. (open console)
+                    <input type="button" value="copyDog" onclick="copyDog()"/>
+                </p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h1 class="main-head">Copying via deserialization is a hack</h1>
+            <p class="text-left">
+                The problem is JSON.parse(JSON.stringify(Object)) will not
+                preserve functions. </p>
+        </div>
+        <div class="main-content">
+            <h1 class="main-head">Copying via apply is a shallow copy</h1>
+            <p class="text-left">
+                apply and spread will not
+                recurse into nested object references.</p>
+        </div>
+        <div class="main-content">
+            <h1 class="main-head">Copy using lodash cloneDeep()</h1>
+            <p class="text-left">
+                You will always need lodash.
+                <input type="button" value="cloneDeepDog" onclick="cloneDeepDog()"/></p>
+        </div>
+    </body>
+</html>
