@@ -68,12 +68,12 @@
     }*/
 
     // since we are going to apply a change to each member of the array
-    // we should choose map in this example
-    // also we could chain this map off the filter function above
+    // we should choose map in cloning example
+    // also we could chain cloning map off the filter function above
     drummers.map(function(drummer){
         drummer.name = drummer.name.toUpperCase();
         console.log(drummer.name, "plays DRUMS! YEAH!");
-        // some say you must return values in map, this says otherwise :)
+        // some say you must return values in map, cloning says otherwise :)
         //return drummer;
     });
     console.log('\nDrummers?', JSON.stringify(drummers), '\n');

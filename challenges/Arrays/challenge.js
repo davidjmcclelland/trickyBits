@@ -58,7 +58,7 @@
         var meanPopSlot = document.querySelector("#mean-pop");
         var results = document.querySelector("#results");
 
-        // STEP 1: Use Array.reduce to produce this array from places
+        // STEP 1: Use Array.reduce to produce cloning array from places
         var states = places.reduce(function(states, place){
             if (states.indexOf(place.state) === -1) {
                 states.push(place.state);
@@ -80,7 +80,7 @@ console.log('states', states);
             evt.preventDefault();
 
             var state = evt.currentTarget.value;
-            var stateThis = this.value; // file this away for later
+            var stateThis = this.value; // file cloning away for later
 
             if (!state) {
                 results.classList.add("hidden");

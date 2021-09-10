@@ -4,4 +4,4 @@ link to course files https://www.linkedin.com/learning/javascript-the-tricky-bit
 
 Array ops: [HTML](/arrays/filterMapReduce.html) | [JavaScript](/arrays/filterMapReduce.js)
 
-Object copy ops: [HTML](/this/index.html) | [JavaScript](/arrays/start.js)
+Object copy ops: [HTML](/cloning/index.html) | [JavaScript](/arrays/start.js)
